@@ -2,8 +2,13 @@ import random
 import smtplib
 from email.mime.text import MIMEText
 
-EMAIL = "your_gmail@gmail.com"
-APP_PASSWORD = "your_app_password"  # Use app password, not Gmail password
+from dotenv import load_dotenv
+import os
+load_dotenv()
+from flask import Flask, request, redirect, render_template, flash
+
+EMAIL = os.getenv("EMAIL")
+APP_PASSWORD = os.getenv("APP_PASSWORD")  # Use app password, not Gmail password
 
 def generate_otp():
     return str(random.randint(100000, 999999))

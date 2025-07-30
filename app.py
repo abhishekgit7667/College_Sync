@@ -3,8 +3,16 @@ from otp_utils import generate_otp, send_otp_email
 from database import init_db, create_user, verify_user
 import bcrypt
 
+
+#
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+
+
 app = Flask(__name__)
-app.secret_key = "your_secret_key_here"  # Change it in production
+app.secret_key = os.getenv("SECRET_KEY")
 
 # Initialize database
 init_db()
