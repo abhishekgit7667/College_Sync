@@ -4,9 +4,9 @@ from mysql.connector import errorcode
 # Database configuration
 DB_CONFIG = {
     'host': 'localhost',
-    'user': 'root',       # Replace with your MySQL username
-    'password': 'Abhi7667@',   # Replace with your MySQL password
-    'database': 'CollegeSync'    # Replace with your MySQL database name
+    'user': 'root',       # Replace with MySQL username
+    'password': 'Abhi7667@',   # Replace with  MySQL password
+    'database': 'CollegeSync'    # Replace with  MySQL database name
 }
 
 def init_db():
